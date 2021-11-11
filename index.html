@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Generator</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <h1>Certificate Generator App</h1>
+    <div id="options">
+      <div id="part1">
+        <p>Certificate Automation from Excel Sheet</p>
+      </div>
+      <div id="part2">
+        <p>Single Certificate Generator</p>
+      </div>
+    </div>
+    <!-- Dark Mode and Creator Starts -->
+    <link rel="stylesheet" href="./css/darkmode.css" />
+    <div id="details">
+      <div id="darkmode">
+        <label class="switch">
+          <input id="checkbox" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div id="creator">
+        <p>Created By:</p>
+        <p>Aman Jha</p>
+        <p><a href="index.html">🡲 Github Repo 🡰</a></p>
+      </div>
+    </div>
+    <script>
+      document.getElementById("checkbox").addEventListener("change", modeCheck);
+      function modeCheck() {
+        if (document.getElementById("checkbox").checked) {
+          sessionStorage.setItem("mode", "light");
+          changeMode();
+        } else {
+          sessionStorage.setItem("mode", "dark");
+          changeMode();
+        }
+      }
+      function changeMode() {
+        let styles = `html {filter: invert(1) hue-rotate(180deg)}
+          img, canvas, #form2 input { filter: invert(1) hue-rotate(180deg)}`;
+        if (sessionStorage.getItem("mode") == "light") {
+          let styleSheet = document.createElement("style");
+          styleSheet.id = "newcss";
+          styleSheet.type = "text/css";
+          styleSheet.innerText = styles;
+          document.body.appendChild(styleSheet);
+        } else {
+          if (document.getElementById("newcss"))
+            document.body.removeChild(document.getElementById("newcss"));
+        }
+      }
+      window.onload = function () {
+        if (sessionStorage.getItem("mode") == "light")
+          document.getElementById("checkbox").checked = true;
+        modeCheck();
+      };
+    </script>
+    <!-- Dark Mode and Creator Ends -->
+  </body>
+  <script>
+    document.getElementById("part1").addEventListener("click", function () {
+      window.location.href = "certificate-automation.html";
+    });
+    document.getElementById("part2").addEventListener("click", function () {
+      window.location.href = "single-certificate.html";
+    });
+  </script>
+</html>

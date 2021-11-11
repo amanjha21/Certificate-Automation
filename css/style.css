@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Euphoria+Script&display=swap");
+* {
+  box-sizing: border-box;
+}
+button input {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Cairo", sans-serif, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+label {
+  cursor: pointer;
+}
+body {
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#heading {
+  position: absolute;
+  top: -10px;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 200px;
+  min-width: 400px;
+  border-radius: 6px;
+  font-size: 1.5vw;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+#canvas {
+  margin-top: 80px;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+#fontstyle,
+#text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+#download {
+  width: 20%;
+}
+#form2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+.hidden {
+  display: none !important;
+}
+#fileUploader {
+  color: white;
+  font-weight: 300;
+  font-size: 2em;
+  width: 50vw;
+  height: 50vh;
+  background-color: rgb(66, 66, 66);
+  background-image: url(".././Images/upload.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  padding-top: 10vh;
+}
+#fileUploader:hover {
+  background-color: rgb(40, 40, 40);
+}
+#fontfamily {
+  width: 80%;
+  height: 100%;
+}
+#fontstyle div button {
+  width: 20%;
+  height: 100%;
+  padding: 0;
+}
+#fontstyle div {
+  display: flex;
+  height: 25%;
+}
+
+/* button init */
+.button1,
+.button2 {
+  text-align: center;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0px;
+  border: 1px solid black;
+}
+.button1 {
+  color: #fff;
+  padding: 20px;
+  background-color: #d35400;
+  width: 100%;
+  transition: all 0.5s;
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button2 {
+  padding: 0px 60px;
+  outline: none;
+  background-color: #27ae60;
+  border-radius: 0px;
+  height: 25%;
+}
+
+.button2:hover {
+  background-color: #2ecc71;
+}
+
+.button2:active {
+  background-color: #23a057;
+  color: white;
+}
+.form2 select,
+.form2 input {
+  height: 25%;
+  text-align: center;
+}

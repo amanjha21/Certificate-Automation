@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Euphoria+Script&display=swap");
+* {
+  box-sizing: border-box;
+}
+button input {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Cairo", sans-serif, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 4.5em;
+}
+#options {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+}
+#part1,
+#part2 {
+  width: 20vw;
+  height: 50vh;
+  font-size: 2vw;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  border: 6px solid rgb(48, 48, 48);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+#part1:hover,
+#part2:hover {
+  background-color: rgb(40, 40, 40);
+}

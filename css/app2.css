@@ -1,0 +1,42 @@
+#excelUploader {
+  color: white;
+  font-weight: 300;
+  font-size: 2em;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(66, 66, 66);
+  background-image: url(".././Images/excel.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  padding-top: 10vh;
+  border-left: 3px solid rgb(124, 124, 124);
+}
+#excelUploader:hover {
+  background-color: rgb(40, 40, 40);
+}
+#fileUploader {
+  width: 50%;
+  height: 100%;
+}
+#form1 div {
+  display: flex;
+  height: 50vh;
+  width: 60vw;
+}
+select {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+#downloading {
+  height: 50vh;
+  width: 50vw;
+  background-color: black;
+  background-image: url(".././images/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+}
